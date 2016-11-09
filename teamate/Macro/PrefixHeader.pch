@@ -1,0 +1,150 @@
+//
+//  PrefixHeader.pch
+//  teamate
+//
+//  Created by Jizan on 2016/10/27.
+//  Copyright © 2016年 jizan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// -------------接口列表---------------
+
+#define BASE_URL @"https://app.mpub.cn"
+// https://app.mpub.cn/masters/swagger-ui.html
+#define APP_NAME @"masters"
+
+
+//#define BASE_URL @"http://192.168.0.112:8088"
+#define PICTURE_URL @""
+
+
+#define  BASE_URL_HEAD [NSString stringWithFormat:@"%@",BASE_URL]
+
+#define  URL_DEPARTMENT_LIST [NSString stringWithFormat:@"%@",@"app/department/list"]  /*部门列表*/
+
+#define  URL_CATEGORY_LIST  [NSString stringWithFormat:@"%@",@"app/category/list"]     /*日志分类*/
+
+#define  URL_WORKCARD_NEW_ON  [NSString stringWithFormat:@"%@",@"app/workcard/new/on" ]      /*上班打卡创建*/
+
+#define  URL_WORKCARD_NEW_OFF  [NSString stringWithFormat:@"%@",@"app/workcard/new/off" ]      /*上班打卡创建*/
+
+#define  URL_WORKCARD_NEW_OUT  [NSString stringWithFormat:@"%@",@"app/workcard/new/out" ]      /*上班打卡创建*/
+
+#define  URL_WORKCARD_LIST  [NSString stringWithFormat:@"%@",@"app/workcard/list" ]      /*上班打卡创建*/
+
+
+#define  URL_WORKLOG_NEW  [NSString stringWithFormat:@"%@",@"app/worklog/new"]       /*日志创建*/
+
+#define  URL_WORKLOG_LIST  [NSString stringWithFormat:@"%@",@"app/worklog/list"]       /*日志列表*/
+
+#define  URL_BackIng_show  [NSString stringWithFormat:@"%@",@"app/workcard/showbg"]       /*背景图片*/
+
+#define  URL_COMPANY_List  [NSString stringWithFormat:@"%@",@"app/company/list"]       /*客户公司*/
+
+//app/workcard/showbg
+
+/**
+ *  弱指针
+ */
+#define WeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#pragma mark - 颜色
+#define kWhiteColor [UIColor whiteColor]
+#define kBlackColor [UIColor blackColor]
+#define kDarkGrayColor [UIColor darkGrayColor]
+#define kLightGrayColor [UIColor lightGrayColor]
+#define kGrayColor [UIColor grayColor]
+#define kRedColor [UIColor redColor]
+#define kGreenColor [UIColor greenColor]
+#define kBlueColor [UIColor blueColor]
+#define kCyanColor [UIColor cyanColor]
+#define kYellowColor [UIColor yellowColor]
+#define kMagentaColor [UIColor magentaColor]
+#define kOrangeColor [UIColor orangeColor]
+#define kPurpleColor [UIColor purpleColor]
+#define kBrownColor [UIColor brownColor]
+#define kClearColor [UIColor clearColor]
+#define kCommonGrayTextColor [UIColor colorWithRed:0.63f green:0.63f blue:0.63f alpha:1.00f]
+#define kCommonRedColor [UIColor colorWithRed:0.91f green:0.33f blue:0.33f alpha:1.00f]
+#define kBgColor kRGBColor(243,245,247)
+#define kLineBgColor [UIColor colorWithRed:0.86f green:0.88f blue:0.89f alpha:1.00f]
+#define kTextColor [UIColor colorWithRed:0.32f green:0.36f blue:0.40f alpha:1.00f]
+#define kRGBAColor(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define kRGBColor(r,g,b) kRGBAColor(r,g,b,1.0f)
+#define kCommonBlackColor [UIColor colorWithRed:0.17f green:0.23f blue:0.28f alpha:1.00f]
+#define kSeperatorColor kRGBColor(234,237,240)
+#define kDetailTextColor [UIColor colorWithRed:0.56f green:0.60f blue:0.62f alpha:1.00f]
+#define kCommonTintColor [UIColor colorWithRed:0.42f green:0.33f blue:0.27f alpha:1.00f]
+#define kCommonBgColor [UIColor colorWithRed:0.86f green:0.85f blue:0.80f alpha:1.00f]
+#define kCommonHighLightRedColor [UIColor colorWithRed:1.00f green:0.49f blue:0.65f alpha:1.00f]
+#define kLeftMargin 15
+
+#pragma mark - 系统UI
+#define kNavigationBarHeight 44
+#define kStatusBarHeight 20
+#define kTopBarHeight 64
+#define kToolBarHeight 44
+#define kTabBarHeight 49
+#define kiPhone4_W 320
+#define kiPhone4_H 480
+#define kiPhone5_W 320
+#define kiPhone5_H 568
+#define kiPhone6_W 375
+#define kiPhone6_H 667
+#define kiPhone6P_W 414
+#define kiPhone6P_H 736
+/***  当前屏幕宽度 */
+#define kScreenWidth  [[UIScreen mainScreen] bounds].size.width
+/***  当前屏幕高度 */
+#define kScreenHeight  [[UIScreen mainScreen] bounds].size.height
+/***  普通字体 */
+#define kFont(size) [UIFont systemFontOfSize:size]
+/***  粗体 */
+#define kBoldFont(size) [UIFont boldSystemFontOfSize:size]
+/***  普通字体 */
+#define kFont(size) [UIFont systemFontOfSize:size]
+#define kLineHeight (1 / [UIScreen mainScreen].scale)
+#define DEFUALT_MARGIN_SIDES 12
+#define TXT_COLOR UIColorARGB(1,153,153,153)
+#define TXT_MAIN_COLOR UIColorARGB(1,51,51,51)
+#define kHeight [[UIScreen mainScreen] bounds].size.height
+#define kWidth  [[UIScreen mainScreen] bounds].size.width
+#define BTN_CORNER_RADIUS 4
+#define GZFont       @"Helvetica"
+#define GZFontLight      @"Helvetica-Light"
+#define GZFontBold   @"Helvetica-Bold"
+#define WeiXinFont @"Heiti-SC-Thin"
+#define WeiXinFontWithSize(siz) [UIFont fontWithName:WeiXinFont size:siz]
+#define GZFontWithSize(siz) [UIFont fontWithName:GZFont size:siz]
+#define GZFontBoldWithSize(siz) [UIFont fontWithName:GZFontBold size:siz]
+#define GZFontLightWithSize(siz) [UIFont fontWithName:GZFontLight size:siz]
+#define BG UIColorARGB(1,241,242,247)
+
+///RGB(42,53,66)
+#define PRIMARY_COLOR UIColorARGB(1,55,75,112)
+#define Navigation_COLOR UIColorARGB(1,255,255,255)
+
+#define Primary_COLOR [UIColor colorWithRed:136/255.0 green:207/255.0 blue:255/255.0 alpha:1]
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define SEPARATOR_LINE_COLOR UIColorARGB(1,229,229,229)
+
+#pragma mark - 字符串转化
+#define kEmptyStr @""
+#define kIntToStr(i) [NSString stringWithFormat: @"%d", i]
+#define kIntegerToStr(i) [NSString stringWithFormat: @"%ld", i]
+#define kValidStr(str) [NHUtils validString:str]
+
+#import "HttpTool.h"
+#import "UIView+Frame.h"
+#import "NHUtils.h"
+#import "UIImageView+WebCache.h"
+#import "NHDefaultHeader.h"
+#import "Masonry.h"
+#import "UINavigationItem+NHAddition.h"
+#import "MBProgressHUD+NHAddition.h"
+#import "UIView+SDAutoLayout.h"
+#import "MJRefresh.h"
+#import "Reachability.h"
+#endif /* PrefixHeader_pch */
