@@ -27,7 +27,7 @@
     CLLocationManager *locationManager;
     NSString *latitude;// jing
     NSString *longitude;// wei
-    NSString *address;// wei
+    NSString *address;//
     CLLocation *loca;
 }
 @property (nonatomic, strong) UILabel *timeLabel;

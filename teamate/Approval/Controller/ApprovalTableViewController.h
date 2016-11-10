@@ -1,5 +1,5 @@
 //
-//  ApproveTableViewController.h
+//  ApprovalTableViewController.h
 //  teamate
 //
 //  Created by MacBook on 2016/11/9.
@@ -8,6 +8,6 @@
 
 #import "BaseTableViewController.h"
 
-@interface ApproveTableViewController : BaseTableViewController
+@interface ApprovalTableViewController : BaseTableViewController
 
 @end

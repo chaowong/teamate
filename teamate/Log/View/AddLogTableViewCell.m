@@ -25,8 +25,6 @@
     [self.contentView addSubview:self.onwork];
     [self.contentView addSubview:self.time];
     [self.contentView addSubview:self.otherLabel];
-
-    
 }
 - (void)addConstraint{
     self.timecardImage.sd_layout
@@ -35,7 +33,7 @@
     .heightIs(40)
     .leftSpaceToView(self.contentView,DEFUALT_MARGIN_SIDES);
     
-//    self.timecardImage.sd_cornerRadius(20);
+    //-self.timecardImage.sd_cornerRadius(20);
     
     self.onwork.sd_layout
     .leftSpaceToView(self.timecardImage,DEFUALT_MARGIN_SIDES)
@@ -54,8 +52,6 @@
     .centerYEqualToView(self.contentView)
     .widthIs(100)
     .heightIs(15);
-
-    
 }
 
 - (UIImageView *)timecardImage{
@@ -83,7 +79,7 @@
     if (!_onwork) {
         _onwork = [[UILabel alloc] init];
         _onwork.textColor = TXT_COLOR;
-        _onwork.font = kFont(13);
+        _onwork.font = kFont(15);
         _onwork.text = @"所属部门";
     }
     return _onwork;

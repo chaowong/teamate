@@ -36,6 +36,7 @@
 @property (nonatomic ,strong) AddLogTableViewCell *cell;
 @property (nonatomic ,strong) AddLogTableViewCell *cell2;
 @property (nonatomic ,strong)CustomCell *cell3;
+
 @end
 
 @implementation AddLogViewController
@@ -87,9 +88,7 @@
 
 - (void)rigthItemClick{
     [self.mycell.textView resignFirstResponder];
-
     [self addWorkLog];
-
 }
 
 #pragma mark - request data
@@ -161,8 +160,8 @@
         .widthIs(150)
         .heightIs(20);
         
-        self.cell2.time.text = @"工作问题";
-        self.cell2.otherLabel.text = @"其他问题";
+        self.cell2.time.text = @"所属分类";
+        self.cell2.otherLabel.text = @"其他类型";
         self.cell2.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         return self.cell2;
     }
@@ -175,7 +174,7 @@
     if (indexPath.section == 3) {
         self.cell3 = [CustomCell cellWithTableView:self.tableView];
         self.cell3.leftLabel.text = @"耗用时间";
-        self.cell3.rightLabel.text = @"请选择";
+        self.cell3.rightLabel.text = @"请选择...";
         self.cell3.accessoryType = UITableViewCellAccessoryNone;
         return self.cell3;
     }
@@ -242,8 +241,6 @@
             
         };
         [self.pickerView show];
-        
-       
     }
 }
 
@@ -283,18 +280,13 @@
 #pragma mark -相册视图
 -(void)setUpPhotosView
 {
-    if (!self.photosView)
-    {
-        
+    if (!self.photosView){
         self.photosView = [[MKMessagePhotoView alloc]initWithFrame:CGRectMake(5,100,kWidth, 80)];
         [self.mycell addSubview:self.photosView];
-        
         self.photosView.delegate = self;
-        
     }
-    
-    
 }
+
 #pragma mark 上传图片UIcollectionView
 -(void)addCollectionViewPicture{
     //创建一种布局
@@ -319,7 +311,6 @@
     [_collectionV registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
 }
-
 
 #pragma mark CollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

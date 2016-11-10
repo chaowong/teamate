@@ -48,11 +48,9 @@
         _textView.tag = 1001;
         _textView.tintColor = PRIMARY_COLOR;
         _textView.placeholderColor = TXT_COLOR;
-        _textView.placeholder = @" 日志内容...";
+        _textView.placeholder = @"日志内容...";
     }
     return _textView;
 }
-//
-
 
 @end

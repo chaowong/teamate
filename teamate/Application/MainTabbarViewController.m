@@ -2,7 +2,7 @@
 #import "BaseNavigationViewController.h"
 #import "MineViewController.h"
 #import "LogViewController.h"
-#import "ApproveTableViewController.h"
+#import "ApprovalTableViewController.h"
 #import "TimecardTableViewController.h"
 @interface MainTabbarViewController ()
 
@@ -42,7 +42,7 @@
     [super viewDidLoad];
     [self addChildViewControllerWithClassname:[TimecardTableViewController description] imagename:@"attendance" title:@"考勤"];
     [self addChildViewControllerWithClassname:[LogViewController description] imagename:@"journal" title:@"日志"];
-    [self addChildViewControllerWithClassname:[ApproveTableViewController description] imagename:@"approval" title:@"审批"];
+    [self addChildViewControllerWithClassname:[ApprovalTableViewController description] imagename:@"approval" title:@"审批"];
     [self addChildViewControllerWithClassname:[MineViewController description]imagename:@"mine" title:@"我的"];
     
 //    NHServiceListRequest *request = [NHServiceListRequest nh_request];

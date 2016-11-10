@@ -165,9 +165,7 @@
     cell.tag = indexPath.row;
     cell.sd_tableView = self.tableView;
     cell.sd_indexPath = indexPath;
-    return cell;
-    
-    
+    return cell;    
 }
 
 
@@ -193,9 +191,7 @@
             [_textView.lpTextView becomeFirstResponder];
 
             [self.view addSubview:_textView];
-
-           
-            
+  
         } break;
             
         default:
@@ -210,8 +206,6 @@
 - (NSInteger)nh_numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
-
-
 
 -(CGFloat)nh_sectionHeaderHeightAtSection:(NSInteger)section{
     return DEFUALT_MARGIN_SIDES;
